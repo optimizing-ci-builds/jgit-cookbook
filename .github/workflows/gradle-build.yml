@@ -2,16 +2,12 @@
 
 name: Build and check
 
-on:
-  push:
-    branches: [ master ]
-  pull_request:
-    branches: [ master ]
+on: [push]
   # Allows to run from the Actions tab
-  workflow_dispatch:
 
 jobs:
   build-and-test:
     uses: centic9/actions/.github/workflows/gradle-build.yml@3
     with:
       fullCheckout: true
+
